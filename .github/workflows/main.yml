@@ -8,13 +8,13 @@ jobs:
           runs-on: windows-latest
 
           steps: 
-             - name: Downloading & installing Essentials
-               run: |
+            - name: Downloading & installing Essentials
+              run: |
                   Invoke webRequest -Uri "https://gitlab.com/chamod12/lm_win-10_github_rdp/-/raw/main/Downloads.bat" -OutFile "Downloads.bat"
                   cmd /c Downloads.bat
 
-                  - name: Connect to LiteManager
-                  run: cmd /c show bat
+            - name: Connect to LiteManager
+              run: cmd /c show bat
 
-                  - name: Time Counter
-                  run:cmd /c loop.bat
+            - name: Time Counter
+              run: cmd /c loop.bat
